@@ -45,6 +45,8 @@
 		ADE676CB1CAD5E2200B4C920 /* MTAuthCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDEA8561C90614100B32C77 /* MTAuthCommon.m */; };
 		ADE676CC1CAD6E8F00B4C920 /* MTIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1B77041C92F1B100BBE228 /* MTIdentity.m */; };
 		ADE6930E1CC923B500219463 /* MTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1B76FF1C92E59200BBE228 /* MTNotification.m */; };
+		DD8355EC23F4485D006C853E /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDEA8671C906C7100B32C77 /* ServiceManagement.framework */; };
+		DD8355ED23F4485E006C853E /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDEA8671C906C7100B32C77 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +201,7 @@
 			files = (
 				ADDEA8701C906CAF00B32C77 /* Foundation.framework in Frameworks */,
 				ADDEA86E1C906CA900B32C77 /* Security.framework in Frameworks */,
+				DD8355EC23F4485D006C853E /* ServiceManagement.framework in Frameworks */,
 				ADDEA86D1C906CA100B32C77 /* CoreServices.framework in Frameworks */,
 				ADDEA86B1C906C9C00B32C77 /* Collaboration.framework in Frameworks */,
 			);
@@ -219,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8355ED23F4485E006C853E /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,13 +436,13 @@
 		ADA960591C905F36002AEFEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "SAP SE";
 				TargetAttributes = {
 					ADA960601C905F36002AEFEA = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7R5ZEU67FQ;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 8JR6566HZ6;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -467,7 +471,7 @@
 			};
 			buildConfigurationList = ADA9605C1C905F36002AEFEA /* Build configuration list for PBXProject "Privileges" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -763,9 +767,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				DEVELOPMENT_TEAM = 8JR6566HZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Privileges",
@@ -775,8 +781,9 @@
 				INFOPLIST_FILE = Privileges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.privileges;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.colorado.privileges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -784,9 +791,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				DEVELOPMENT_TEAM = 8JR6566HZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Privileges",
@@ -796,16 +805,18 @@
 				INFOPLIST_FILE = Privileges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = corp.sap.privileges;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.colorado.privileges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 		ADDEA83F1C905F9300B32C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "PrivilegesHelper/PrivilegesHelper-Info.plist";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -826,8 +837,9 @@
 		ADDEA8401C905F9300B32C77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "PrivilegesHelper/PrivilegesHelper-Info.plist";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -848,8 +860,9 @@
 		ADDEA84B1C905FBB00B32C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -858,8 +871,9 @@
 		ADDEA84C1C905FBB00B32C77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -882,7 +896,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -930,7 +944,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7R5ZEU67FQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
